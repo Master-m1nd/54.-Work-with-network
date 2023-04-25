@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div class="body">
+        <div class="picture">
+            <img [src]="img" alt="">
+        </div>
+        <div class="user-data">
+            <div class="user-data-item">
+                <h2>{{name}}</h2>
+                <div class="edit-body">
+                    <input [(ngModel)]="newName" type="text" placeholder="Write new name">
+                    <button (click)="onNameEdit()" class="network">Edit</button>
+                </div>
+            </div>
+            <div class="user-data-item">
+                <div class="status-text">{{status}}</div>
+                <div class="edit-body">
+                    <input [(ngModel)]="newStatus" type="text" placeholder="Write new status">
+                    <button (click)="onStatusEdit()" class="network">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="group">
+        <p><b>Group Name:</b><span>{{usersService.getGroupName()}}</span></p>
+    </div>
+</div>>
+
